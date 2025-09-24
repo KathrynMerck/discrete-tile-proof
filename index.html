@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h3>
+    I had some free time.
+  </h3>
+  <div id="twoPow" )>
+    Width:
+    2<sup>x</sup>
+  </div>
+  <label for="xVal">x = </label>
+  <input type="number" min=0 max=7 value=5 id="xVal">
+  <br>
+  <br>
+  <button id="playButton">Play</button>
+  <button id="pause">Pause</button>
+  <label for="globalColor">Color</label>
+  <input type="color" id="globalColor" name="globalColor" value="#ffffff">
+  <label for="globalStroke">Stroke</label>
+  <input type="color" id="globalStroke" name="globalStroke" value="#4B0082">
+  <label for="speed">Speed (ms between "frames")</label>
+  <input type="range" id="speed" name="speed" min=30 max=150 value=70>
+  <label id="speedLab">70</label>
+  <input type="checkbox" id="overlay" name="overlay" checked>
+  <label for="overlay">Overlay</label>
+  <br>
+  <br>
+  <svg id="chart">
+    <defs id="defs">
+      <path d="M -300 0 l 600 0 m -300 -300 l 0 600" stroke-dasharray="5,5" stroke="white" stroke-width="3" id="divider"
+        opacity=0></path>
+      <path d="M-600 600 l 0 -600 l 300 0 l 0 300 l 300 0 l 0 300 l -600 0 " fill="white" stroke="indigo"
+        stroke-width="6" id="tile"></path>
+      <g id="colors" opacity=0.25 transform="scale(2)">
+        <path d="M-300 0 l -300 0 l 0 300 l 150 0 l 0 -150 l 150 0 l 0 -150" fill="cyan" id="tL"></path>
+        <path d="M -300 150 l -150 0 l 0 300 l 300 0 l 0 -150 l -150 0 l 0 -150 " fill="gray" id="bL"></path>
+        <path d="M -450 300 l -150 0 l 0 300 l 300 0 l 0 -150 l -150 0 l 0 -150 " fill="magenta" id="m"></path>
+        <path d="M -150 300 l 0 150 l -150 0 l 0 150 l 300 0 l 0 -300" fill="yellow" id="bR"></path>
+      </g>
+      <g id="g1" class="gs">
+        <use href="#tile" x="0" y="0"></use>
+      </g>
+    </defs>
+    <g id="expand" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <use href="#g4" id="current" x=700 y=100></use>
+      <use href="#divider" x=400 y=400></use>
+    </g>
+  </svg>
+  <br>
+  <button id="download">Download</button>
+  <div id=test>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
